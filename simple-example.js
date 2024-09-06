@@ -12,7 +12,7 @@ This turns your choice of lights on or off using fast mode and minimum fade dura
 It's a basic implementation of https://api.developer.lifx.com/reference/set-state
 Use the LIFX documentation and modify for your needs.
 */
-function powerLight(selector, power) {
+function setState(selector, power) {
     Shelly.call(
         "HTTP.Request", {
             "method": "PUT",
@@ -35,4 +35,4 @@ function powerLight(selector, power) {
 
 //If your auth token is correct and deviceSelector is all,
 //uncomment the call below to turn all available lights on.
-//powerLight(deviceSelector, true);
+//setState(deviceSelector, true);
