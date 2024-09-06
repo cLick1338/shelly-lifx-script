@@ -1,5 +1,5 @@
-Simple Shelly script example of how to call LIFX' HTTP API to turn lights on or off. 
+### Simple Shelly script example for turning LIFX lights on or off using the HTTP API.
 
-While much simpler to implement than the LIFX LAN protocol, it relies on LIFX's servers and can have issues latency, reliability or privacy concerns.
+View [the script](https://github.com/cLick1338/shelly-lifx-script/blob/main/simple-example.js) for more details.
 
-View the script for more details.
+While much simpler to implement than the LIFX LAN protocol, it relies on LIFX's servers and raises the usual concerns of cloud-reliant solutions (most notably longer response times).
