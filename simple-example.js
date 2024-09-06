@@ -1,9 +1,3 @@
-/*
-This turns your choice of lights on or off using fast mode and minimum fade duration.
-It's a basic implementation of https://api.developer.lifx.com/reference/set-state
-Use the LIFX documentation and modify for your needs.
-*/
-
 //Replace only the zeroes with your LIFX API access token obtained from https://cloud.lifx.com/settings
 let auth = 'Bearer 0000000000000000000000000000000000000000000000000000000000000000';
 
@@ -13,6 +7,11 @@ The id of a light can also be found in the light's setting in app as 'serial'.
 */
 let deviceSelector = 'all';
 
+/*
+This turns your choice of lights on or off using fast mode and minimum fade duration.
+It's a basic implementation of https://api.developer.lifx.com/reference/set-state
+Use the LIFX documentation and modify for your needs.
+*/
 function powerLight(selector, power) {
     Shelly.call(
         "HTTP.Request", {
@@ -24,6 +23,7 @@ function powerLight(selector, power) {
             "body": JSON.stringify({
                 fast: true,
                 power: power ? 'on' : 'off',
+                //brightness: 0.5, //Example for adding the brightness param
                 duration: 0
             })
         },
@@ -33,5 +33,6 @@ function powerLight(selector, power) {
     );
 };
 
-//Uncomment this and start the script to turn all available lights on.
+//If your auth token is correct and deviceSelector is all,
+//uncomment the call below to turn all available lights on.
 //powerLight(deviceSelector, true);
