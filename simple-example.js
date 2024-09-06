@@ -3,7 +3,7 @@ let auth = 'Bearer 0000000000000000000000000000000000000000000000000000000000000
 
 /*Selector can be 'all' or a device, group or location's "id". Get them with the list lights request.
 https://api.developer.lifx.com/reference/list-lights Run in browser using your auth string.
-The id of a light can also be found in the light's setting in app as 'serial'.
+The id of a light can also be found in the LIFX app -> Light Setting -> Serial
 */
 let deviceSelector = 'all';
 
